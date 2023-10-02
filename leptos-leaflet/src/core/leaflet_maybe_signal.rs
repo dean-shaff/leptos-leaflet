@@ -2,7 +2,6 @@
  * Copyright (c) HeadlessStudio  2023.
  */
 
-
 use leptos::*;
 
 #[derive(Copy, Clone)]
@@ -23,7 +22,7 @@ impl<T> Default for LeafletMaybeSignal<T>
     }
 }
 
-impl<T> SignalGet<Option<T>> for LeafletMaybeSignal<T>
+impl<T> SignalGet<Value = Option<T>> for LeafletMaybeSignal<T>
     where
         T: Clone + 'static,
 {
@@ -42,7 +41,7 @@ impl<T> SignalGet<Option<T>> for LeafletMaybeSignal<T>
     }
 }
 
-impl<T> SignalWith<Option<T>> for LeafletMaybeSignal<T>
+impl<T> SignalWith<Value = Option<T>> for LeafletMaybeSignal<T>
     where
         T: Clone + 'static,
 {
@@ -61,7 +60,7 @@ impl<T> SignalWith<Option<T>> for LeafletMaybeSignal<T>
     }
 }
 
-impl<T> SignalWithUntracked<Option<T>> for LeafletMaybeSignal<T>
+impl<T> SignalWithUntracked<Value = Option<T>> for LeafletMaybeSignal<T>
     where
         T: Clone + 'static,
 {
@@ -80,7 +79,7 @@ impl<T> SignalWithUntracked<Option<T>> for LeafletMaybeSignal<T>
     }
 }
 
-impl<T> SignalGetUntracked<Option<T>> for LeafletMaybeSignal<T>
+impl<T> SignalGetUntracked<Value = Option<T>> for LeafletMaybeSignal<T>
     where
         T: Clone + 'static,
 {
