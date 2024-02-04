@@ -49,12 +49,12 @@ pub fn MapContainer(
         // Randomize the id of the map
         if html_node.id().is_empty() {
             let id = format!("map-{}", rand::random::<u64>());
-            map_div.clone().id(id);
+            let _ = map_div.clone().id(id);
         }
         let events = events.clone();
         let popup_events = popup_events.clone();
         let tooltip_events = tooltip_events.clone();
-        map_div.on_mount(move |map_div| {
+        let _ = map_div.on_mount(move |map_div| {
             let map_div = map_div.unchecked_ref::<HtmlDivElement>();
             let mut options = leaflet::MapOptions::new();
             options.zoom(zoom);
